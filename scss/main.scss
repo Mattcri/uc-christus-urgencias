@@ -1,0 +1,15 @@
+// Base styles
+@import "base/fonts";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/general";
+
+ // Layout Sections
+@import "layout/header";
+@import "layout/fixed-icon";
+@import "layout/hero";
+@import "layout/cotiza";
+@import "layout/planes";
+@import "layout/download-files";
+@import "layout/faq";
+@import "layout/footer";

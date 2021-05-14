@@ -1,0 +1,153 @@
+main {
+  p {
+    text-align: center;
+  }
+  .valor-referencial {
+    align-items: center;
+    width: auto;
+    margin-bottom: 20px;
+    @include respond-to-min(998px) {
+      margin-bottom: 100px;
+    }
+    p {
+      font-size: .83rem;
+      letter-spacing: -.8px;
+      margin: 0;
+    }
+    img {
+      width: 140px;
+      height: 50px;
+      object-fit: contain;
+      @include respond-to-min(550px) {
+        width: 200px;
+        height: 70px;
+      }
+    }
+  }
+}
+.referencial__txt {
+  &--morado {
+    color: $color-morado;
+  }
+}
+
+.box-planes {
+  max-width: 400px;
+  margin: 0 auto;
+  &__content {
+    height: 34.5rem;
+    background-color: #fff;
+    position: relative;
+    @include sombra2;
+  }
+  &__icon {
+    padding: 3rem 2rem 2rem;
+    @include flex-center;
+    @include flex-column;
+    &--destacado {
+      position: absolute;
+      right: -27px;
+      top: -27px;
+      .destacado--img {
+        height: 150px;
+      }
+    }
+    img {
+      height: 65px;
+    }
+  }
+  &__description {
+    &--pad {
+      padding-bottom: 2.6rem;
+      @include respond-to-min(998px) {
+        padding-bottom: 2rem;
+      }
+    }
+    height: auto;
+    width: 100%;
+    padding: 1rem 1.6rem 0;
+    ul {
+      padding: 0;
+    }
+    ul li {
+      list-style: none;
+      background: url("../images/check.svg") no-repeat;
+      padding-bottom: 8px;
+      padding-left: 26px;
+      @include respond-to(550px) {
+        font-size: .95rem;
+      }
+      @include respond-to-min(998px) {
+        font-size: .9rem;
+      }
+      @include respond-to-min(1200px) {
+        font-size: 1rem;
+      }
+    }
+
+  }
+
+  &__prices {
+    text-align: center;
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 0;
+    @include respond-to(550px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__wrap-btn {
+    width: 100%;
+    padding: .5rem 1.6rem;
+    @include flex-center;
+  }
+  &__btn {
+    @include btn-base;
+    padding: .9rem 2.3rem;
+    position: absolute;
+    bottom: 15%;
+    @include respond-to-min(998px) {
+      bottom: 12%;
+    }
+    @include respond-to-min(1200px) {
+      bottom: 16%;
+    }
+    &--morado {
+      background-color: $color-morado;
+      &:hover {
+        background-color: lighten($color-morado, 15%);
+      }
+    }
+    &--rosa {
+      background-color: $color-rosa;
+      &:hover {
+        background-color: lighten($color-rosa, 15%);
+      }
+    }
+  }
+
+  &__more-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    @include flex-center;
+  }
+  &__info-txt {
+    color: $color-azul;
+    position: relative;
+    &::after {
+      content: '';
+      background: url("../images/link-up.svg") no-repeat;
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      transform: translateY(-40%);
+      width: 20px;
+      height: 10px;
+    }
+  }
+
+}
+

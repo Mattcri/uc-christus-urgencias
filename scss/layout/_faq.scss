@@ -1,0 +1,71 @@
+.faq-section {
+  background-color: #fff;
+  height: auto;
+  padding-bottom: 3rem;
+  @include respond-to(800px) {
+    padding-top: 2.2rem;
+  }
+  p {
+    font-family: $font-l;
+    font-weight: 500;
+  }
+}
+
+.js-accordion-content {
+  line-height: 1.2;
+  overflow: hidden;
+  -webkit-transition: all .2s linear;
+  transition: all .3s linear;
+  
+}
+
+.ac-default .item-ac button {
+  font-size: 1.1rem;
+  // color: #616A71;
+  background: transparent;
+  padding: 1.5rem 5rem 1.4rem 1rem;
+  text-align: left;
+  font-weight: normal;
+  margin-bottom: 0px;
+  border: none;
+  border-bottom: 1.5px solid $color-border-accor;
+  position: relative;
+  -webkit-transition: all .3s ease;
+  transition: all .7s ease;
+  width: 100%;
+  @include respond-to(800px) {
+    border-bottom: 1.1px solid $color-border-accor;
+  }
+
+}
+
+.ac-default .item-ac button.activo {
+  color: $color-azul;
+  border-color: transparent;
+  transition: all .5s linear;
+  font-size: 1rem;
+  padding-top: 1.2rem;
+}
+
+.ac-default .item-ac .int-ac p {
+  padding: .5rem 1rem 1rem;
+  font-family: $font-l;
+  
+}
+
+.ac-default .item-ac button::after {
+  content: "+";
+  color: $color-azul;
+  font-weight: 800;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 40px;
+  top: 50;
+  transform: translateY(-40%);
+}
+
+.ac-default .item-ac button.activo:after {
+  content: "-";
+  color: $color-azul;
+  font-size: 2rem;
+}

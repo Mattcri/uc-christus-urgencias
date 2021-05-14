@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Montserrat-reg";
+  font-display: swap;
+  src: url("fonts/Montserrat-Regular.otf") format("otf");
+}
+@font-face {
+  font-family: "Montserrat-bold";
+  font-display: swap;
+  src: url("fonts/Montserrat-Black.otf") format("otf");
+}
+@font-face {
+  font-family: "Montserrat-light";
+  font-display: swap;
+  src: url("fonts/Montserrat-Light.otf") format("otf");
+}

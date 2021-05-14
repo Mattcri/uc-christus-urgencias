@@ -1,0 +1,25 @@
+header{
+  padding: 1rem 0;
+  background-color: #fff;
+  .wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @include respond-to(550px){
+    .logo{
+      width: 60%;
+      display: block;
+      img{
+        width: 100%;
+      }
+    }
+    .logo-plan{
+      width: 30%;
+      display: block;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

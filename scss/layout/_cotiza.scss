@@ -1,0 +1,111 @@
+.cotiza {
+  padding: 0 0 1rem;
+  .gradient-line {
+    height: 15px;
+    width: 100%;
+    background: -moz-linear-gradient(left, rgba(42,125,225,1) 0%, rgba(105,31,116,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(42,125,225,1)), color-stop(100%, rgba(105,31,116,1)));
+    background: -webkit-linear-gradient(left, rgba(42,125,225,1) 0%, rgba(105,31,116,1) 100%);
+    background: -o-linear-gradient(left, rgba(42,125,225,1) 0%, rgba(105,31,116,1) 100%);
+    background: -ms-linear-gradient(left, rgba(42,125,225,1) 0%, rgba(105,31,116,1) 100%);
+    background: linear-gradient(to right, rgba(42,125,225,1) 0%, rgba(105,31,116,1) 100%);
+    transform: translateY(-80px);
+    @include respond-to(800px) {
+      transform: translateY(-30px);
+    }
+  }
+  & .form-cotiza {
+    figure {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 25px;
+      @include respond-to-min(998px) {
+        display: none;
+      }
+    }
+    transform: translateY(-80px);
+    background-color: #fff;
+    padding: 3rem 2.5rem 2.5rem;
+    border-radius: 10px 10px 0 0;
+    @include sombra3;
+    @include respond-to(800px) {
+      transform: translateY(-30px);
+    }
+    @include respond-to(550px) {
+      padding: 3rem .5rem 2.5rem; 
+    }
+  }
+  & .box-flex {
+    @include flex-only;
+    justify-content: center;
+    @include respond-to(768px) {
+      @include flex-column;
+    }
+  }
+  & .form-group {
+      margin: 0 .5rem 1rem;
+      @include respond-to(768px) {
+        margin: 0 0 1rem;
+      }
+      & select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      letter-spacing: -1px;
+      appearance: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      border: 2px solid $color-azul;
+      width: auto;
+      max-width: 353px;
+      height: 3.1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $color-font;
+      padding: .5rem 1.75rem .5rem .75rem;
+      text-align: left;
+      @include respond-to(768px) {
+        width: 100%;
+        max-width: initial;
+      }
+    }
+
+    & input {
+      background-color: #fff;
+      border-radius: 10px;
+      border: 2px solid $color-azul;
+      width: 285px;
+      max-width: 353px;
+      height: 3.1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: -1px;
+      color: $color-font;
+      padding: .5rem .75rem;
+      text-align: left;
+      @include respond-to(768px) {
+        width: 100%;
+        max-width: initial;
+      }
+      &::placeholder {
+        color: $color-font;
+      }
+      &.btn-base {
+        @include btn-base;
+        &.btn-sendForm {
+          width: auto;
+          background-color: $color-gris;
+          border-color: $color-gris;
+          text-transform: uppercase;
+          letter-spacing: 0;
+          @include respond-to(768px) {
+            width: 100%;
+          }
+          &:hover {
+            background-color: darken( $color-gris, 10% );
+          }
+        }
+      }
+    }
+
+  }
+}

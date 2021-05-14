@@ -1,0 +1,57 @@
+.download-files {
+  background-color: #fff;
+  @include respond-to(550px) {
+    padding-top: 30px;
+  }
+}
+
+.box-files {
+  max-width: 450px;
+  margin: 0 auto;
+  height: 230px;
+  padding: 1rem 0;
+  @include respond-to-min(998px) {
+    transform: translateY(-60px);
+  }
+  &__bg-section {
+    background: url("../images/bg-download-1.jpg") center center no-repeat;
+    background-size: cover;
+    @include flex-only;
+    justify-content: center;
+    height: 100%;
+    &--2 {
+      background: url("../images/bg-download-2.jpg") center center no-repeat;
+    }
+    &--3 {
+      background: url("../images/bg-download-3.jpg") center center no-repeat;
+    }
+  }
+
+  &__content {
+    height: 200px;
+    @include flex-only;
+    @include flex-center;
+    // align-items: center;
+  }
+
+  &__txt {
+    margin-left: 15px;
+    p {
+      color: #fff;
+      margin: 0 0 5px;
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+      position: relative;
+      &::after {
+        content: '';
+        width: 20px;
+        height: 18px;
+        position: absolute;
+        right: -30px;
+        background: url("../images/arrow-down-white.svg") no-repeat;
+      }
+    }
+  }
+}
